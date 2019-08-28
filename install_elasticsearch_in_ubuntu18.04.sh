@@ -1,12 +1,9 @@
-sudo apt update && apt upgrade -y
-sudo reboot  
-sudo add-apt-repository ppa:webupd8team/java
-sudo apt install oracle-java8-set-default
+sudo apt update
+sudo apt install default-jdk
 java -version
-wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-6.3.2.deb
-ls
-dpkg -i elasticsearch-6.3.2.deb
-sudo dpkg -i elasticsearch-6.3.2.deb
+
+wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.0.0-amd64.deb
+sudo dpkg -i elasticsearch-7.0.0-amd64.deb
 cd /etc/elasticsearch/
 hostname -I
 # Copy host name and paste in yml file where host.name
